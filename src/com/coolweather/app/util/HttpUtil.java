@@ -6,6 +6,8 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
+import android.util.Log;
+
 
 
 
@@ -30,6 +32,8 @@ public class HttpUtil {
 					while ((line = reader.readLine()) != null) {
 						respone.append(line);
 					}
+					Log.i("------", address);
+					Log.i("------", respone.toString());
 					if (listener != null) {
 						listener.onFinish(respone.toString());
 					}
